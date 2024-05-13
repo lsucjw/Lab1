@@ -15,7 +15,7 @@ pipeline {
                 	echo 'Pytest is ready'
 		}
 	}
-	stage("Start Main.py" {
+	stage("Start Main.py") {
 		steps {
 			sh 'python3 main.py start'
 			echo 'Main.py is done'
