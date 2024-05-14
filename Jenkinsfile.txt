@@ -17,9 +17,7 @@ pipeline {
 	}
 	stage("Start Pytest") {
 		steps {
-			sh 'python3 -m pip install pytest'
-			sh 'pytest --version'
-			sh 'python3 pytest test.py --junitxml=Lab1/report/out_report.xml'
+			sh 'python3 -m  pytest test.py --junitxml=Lab1/report/out_report.xml'
 			echo 'Pytest is ready'
 		}
 	}
