@@ -7,13 +7,13 @@ pipeline {
 	stage("Install Libraries") {
 		steps {
 			sh 'pip3 install -r requirements.txt'
+			sleep 20
 		}
 	}
 	stage("Start Pytest") {
 		steps {
 			sh 'pytest test.py --junitxml=Lab1/report/out_report.xml'
             echo 'Pytest is ready'
-			sleep 20
 		}
 	}
 	stage("Start Main.py") {
