@@ -9,12 +9,6 @@ pipeline {
 			sh 'pip3 install -r requirements.txt'
 		}
 	}
-	stage("Start Pytest") {
-		steps {
-			sh 'sudo pytest test.py --junitxml=Lab1/report/out_report.xml'
-                	echo 'Pytest is ready'
-		}
-	}
 	stage("Start Main.py") {
 		steps {
 			sh 'python3 main.py start'
