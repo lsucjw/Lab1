@@ -2,7 +2,7 @@ import pytest
 import os.path
 import main
 
-
+main.a=1
 def test_create_database():  # Тест на создание БД
     main.init_db()
     assert os.path.exists(main.db_name) == True
